@@ -1,73 +1,60 @@
-<?php
-session_start();
-$username = "";
-$email    = "";
-$errors = array(); 
+<?php 
 $db = mysqli_connect('localhost', 'root', 'Uke2LEAeTG0Oo5F4', 'mydb1');
+$u="";
+$e="";
+$pos="";
+$file1="";
+$errors=array();
 
+if(isset($_POST['s']))
+{
 
-if (isset($_POST['reg_user'])) {
-  // receive all input values from the form
-  $username = mysqli_real_escape_string($db, $_POST['username']);
-  $email = mysqli_real_escape_string($db, $_POST['email']);
-  $password_1 = mysqli_real_escape_string($db, $_POST['password_1']);
-  $password_2 = mysqli_real_escape_string($db, $_POST['password_2']);
-
-  if (empty($username)) { array_push($errors, "Username is required"); }
-  if (empty($email)) { array_push($errors, "Email is required"); }
-  if (empty($password_1)) { array_push($errors, "Password is required"); }
-  if ($password_1 != $password_2) {
-	array_push($errors, "The two passwords do not match");
-  }
-
-  $user_check_query = "SELECT * FROM users WHERE username='$username' OR email='$email' LIMIT 1;";
-  $result = mysqli_query($db, $user_check_query);
-  $user = mysqli_fetch_assoc($result);
-  
-  if ($user) { // if user exists
-    if ($user['username'] === $username) {
-      array_push($errors, "Username already exists");
-    }
-
-    if ($user['email'] === $email) {
-      array_push($errors, "email already exists");
-    }
-  }
-  if (count($errors) == 0) {
-  	$password = md5($password_1);
-
-  	$query = "INSERT INTO users (username, email, password) 
-  			  VALUES('$username', '$email', '$password')";
-  	mysqli_query($db, $query);
-  	$_SESSION['username'] = $username;
-  	$_SESSION['success'] = "You are now logged in";
-  	header('location: index.php');
-  }
+$u=$_POST['image'];
+if (empty($image)) { array_push($errors, "Username is required"); }
 }
+//$file = array("27.png","13.png","14.png","24.jpg");
+  $result = mysqli_query($db, "SELECT image FROM images where image='$u'") or die("Error: " . mysqli_error($db)); //Let say If I put the file name Bang.png
+ // $query = "SELECT Desired_column FROM Table_Name";
+//$results = mysqli_query($sql, $query);
 
-if (isset($_POST['login_user'])) {
-  $username = mysqli_real_escape_string($db, $_POST['username']);
-  $password = mysqli_real_escape_string($db, $_POST['password']);
+//$rows = [];
+$row=mysqli_fetch_array($result);
+$name=$row['image'];
+echo ($name);
+/*while($row = mysqli_fetch_array($result,MYSQLI_NUM)) {
 
-  if (empty($username)) {
-  	array_push($errors, "Username is required");
-  }
-  if (empty($password)) {
-  	array_push($errors, "Password is required");
-  }
+    $rows[] = $row;
 
-  if (count($errors) == 0) {
-  	$password = md5($password);
-  	$query = "SELECT * FROM users WHERE username='$username' AND password='$password'";
-  	$results = mysqli_query($db, $query);
-  	if (mysqli_num_rows($results) == 1) {
-  	  $_SESSION['username'] = $username;
-  	  $_SESSION['success'] = "You are now logged in";
-  	  header('location: index.php');
-  	}else {
-  		array_push($errors, "Wrong username/password combination");
-  	}
-  }
 }
+$l=sizeof($rows);
+    for($x=0;$x<$l;$x++)
+    {
+    	if($rows[$x]==$u)
+    	{
+    		echo("hello");
+    		echo "<img src='$rows[$x]' >";
+    	$pos=$rows[$x];
+    }
+    }*/
+   // echo "<a href='download.php?nama=".$pos."'>donload</a> ";
+   download($name);
 
+    function download($name) {
+        $file1 = $name;
+
+        if (file_exists($file1)) {
+            header('Content-Description: File Transfer');
+            header('Content-Type: application/octet-stream');
+            header('Content-Disposition: attachment; filename='.basename($file1));
+            header('Content-Transfer-Encoding: binary');
+            header('Expires: 0');
+            header('Cache-Control: must-revalidate');
+            header('Pragma: public');
+            header('Content-Length: ' . filesize($file1));
+            ob_clean();
+            flush();
+            readfile($file1);
+            exit;
+       }
+    }
 ?>
