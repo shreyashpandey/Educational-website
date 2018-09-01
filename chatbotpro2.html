@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<meta name="robots" content="noindex, nofollow" />
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<style>
+@import url(http://fonts.googleapis.com/css?family=Droid+Serif); /* to import google font style */ 
+
+input{ 
+	width:420px; 
+	height:20px; 
+	border-radius:4px;
+	box-shadow:0px 0px 1px 2px #123456; 
+	margin-top:10px;
+	padding:2px 7px;
+	
+	}
+
+form{
+	padding:0 20px 20px 20px;
+	width:450px;
+	
+	}
+h3{
+	padding-bottom:15px; 
+	text-align:center;
+	color:#333333;
+	font-size:20px;
+	text-shadow:2px 2px 2px #cfcfcf;
+	}
+.notification{
+	color:#777;
+	}
+</style>
+<!--<link rel="stylesheet" type="text/css" href="style.css">
+<script src="script.js"></script>-->
+</head>
+<body style="background-image:url(back2.gif);background-position:center;background-attachment:fixed;background-repeat:no-repeat;background-size:cover;">
+
+<!-- form starts here -->
+<div id="first" style="position:absolute;bottom:0px;right:40px;">
+<!--<div id="v" style="position:absolute;top:-410px;right:0px;background-color:#555;opacity:0.7;width:450px;height:60px;z-index:2;transform:scale(0);">
+<h3 align="center" style="font-family:AR DESTINE;dispay:inline-block;position:absolute;top:-15px;left:120px;">WELCOME Im CHATTER</h3>
+<img src="30.gif" alt="chatter" style="position:absolute;top:-10px;height:100px;width:200px;left:118px;display:inline-block;opacity:1;z-index:2;">
+<div style="position:absolute;top:-10px;left:0px;z-index:3;"><img id="o" src="31.gif" style="position:sticky;top:-520px;left:-580px;height:100px;width:120px;display:none;"/></div>
+<br>
+</div>
+<div id="p"  style="position:absolute;top:-350px;right:0px;width:450px;height:290px;background-color:#555;z-index:1;transform:scale(0);transition:1s;opacity:0.7;border:none;border-bottom:5px;border-radius:0%;overflow:auto;">
+<h3 align="center" style="font-family:AR DESTINE;dispay:inline-block;">WELCOME Im CHATTER</h3>
+<img src="30.gif" alt="chatter" style="position:absolute;top:20px;height:100px;width:200px;left:118px;display:inline-block;opacity:1;">
+<br>
+<h4 style="display:inline-block;">Whats Your name Sir?</h4><br><h4 style="display:inline-block;position:absolute;top:120px;">This is the chatter version 1.o</h4>
+<form id="r1" action="javascript:void(0)" name="form1" style="z-index:3;top:130px;right:0px;position:absolute;" >
+<input id="z1" type="search" name="i1" placeholder="Type over here" style="height:40px;width:250px;" autofocus="true" onsearch="e()">
+
+<input id="z2" type="search" name="i1" placeholder="Type over here" style="height:40px;width:250px;" autofocus="true" onsearch="f()">
+
+<div id="u" style="position:absolute;top:160px;left:-170px;"></div>
+</form>
+</div>-->
+<div id="v" style="position:absolute;top:-410px;right:0px;background-color:#555;opacity:0.7;width:450px;height:350px;z-index:2;display:none;">
+<form id="my_form" action="javascript:void(0)" method="post">
+<!--<h3>Form Title</h3>
+<label style="font-size:20px;font-family:AR Destine;color:white;position:absolute;bottom:100px;background-color:black;border:4px solid white;padding:25px 15px;">Input any command you want to enter</label>-->
+<input type="name" id="name0" class="text"  style="position:absolute;bottom:30px;width:70%;height:20px;left:15px;">
+<img id="i1" src="mice.png" onclick="startDictation()" alt="mice" style="position:absolute;bottom:30px;right:15px;width:50px;height:50px;">
+<!--<textarea id="message" class="text">
+</textarea>-->
+</form>
+<div id="fourth">
+<p id="v2" style="display:none;background-color:black;color:white;width:80px;border-radius:90%;position:absolute;left:0px;" onclick="b()">Educational topic</p>
+<p id="v3" style="display:none;background-color:black;color:white;width:80px;border-radius:90%;position:absolute;left:90px;" onclick="c()">Educational topic</p>
+<p id="v4" style="display:none;background-color:black;color:white;width:80px;border-radius:90%;position:absolute;left:180px;" onclick="d()">Educational topic</p>
+<p id="v5" style="display:none;background-color:black;color:white;width:80px;border-radius:90%;position:absolute;left:270px;" onclick="e()">Educational topic</p>
+<p id="v7" style="display:none;background-color:black;color:white;width:80px;border-radius:90%;position:absolute;left:0px;" onclick="f()">ICSE</p>
+<p id="v8" style="display:none;background-color:black;color:white;width:80px;border-radius:90%;position:absolute;left:90px;" onclick="g()">CBSE</p>
+<p id="v9" style="display:none;background-color:black;color:white;width:80px;border-radius:90%;position:absolute;left:180px;" onclick="h()">Educational topic</p>
+<p id="v10" style="display:none;background-color:black;color:white;width:80px;border-radius:90%;position:absolute;left:270px;" onclick="i()">Educational topic</p>
+</div>
+<div id="second">
+
+</div>
+<div id="third">
+</div>
+</div>
+<div id="v1" style="display:block;position:absolute;top:-60px;right:0px;width:450px;height:50px;background-color:#0099B9;color:white;"onclick="a()">
+<span style="position:absolute;"><img src="27.png" style="width:40px;height:40px;"/><p align="center"style="position:absolute;top:-10px;right:-140px;font-family:AR DESTINE;font-size:26px;">Chatter</p></span>
+</div>
+
+</div>
+
+<script>
+
+/*window.setTimeout(function(){
+	document.getElementById("mainheading").style.display="block";
+},2000);
+window.setInterval(function(){
+	document.getElementById("mainheading").style.display="none";
+},7000);*/
+function a(){
+window.setTimeout(function() { document.getElementById("name0").focus(); },0);
+window.setTimeout(function() { document.getElementById("name0").style.bottom="70px"; },2000);
+window.setTimeout(function() { document.getElementById("i1").style.bottom="70px"; },2000);
+window.setTimeout(function() { document.getElementById("v2").style.display="block"; },2000);
+
+window.setTimeout(function() { document.getElementById("v2").style.bottom="0px"; },2000);
+window.setTimeout(function() { document.getElementById("v3").style.display="block"; },2000);
+
+window.setTimeout(function() { document.getElementById("v3").style.bottom="0px"; },2000);
+window.setTimeout(function() { document.getElementById("v4").style.display="block"; },2000);
+
+window.setTimeout(function() { document.getElementById("v4").style.bottom="0px"; },2000);
+window.setTimeout(function() { document.getElementById("v5").style.display="block"; },2000);
+
+window.setTimeout(function() { document.getElementById("v5").style.bottom="0px"; },2000);
+}
+alert("Hello");
+function b()
+{document.getElementById("name0").value="educational info";
+	window.setTimeout(function() { document.getElementById("name0").blur(); },0);
+window.setTimeout(function() { document.getElementById("name0").style.bottom="210px"; },0);
+window.setTimeout(function() { document.getElementById("i1").style.bottom="210px"; },0);
+window.setTimeout(function() { document.getElementById("v2").style.bottom="140px"; },0);
+window.setTimeout(function() { document.getElementById("v3").style.bottom="140px"; },0);
+window.setTimeout(function() { document.getElementById("v4").style.bottom="140px"; },0);
+window.setTimeout(function() { document.getElementById("v5").style.bottom="140px"; },0);
+	var u=document.createElement("p");
+	u.setAttribute("id","p1");
+			u.setAttribute("style","position:absolute;bottom:100px;right:0px;background-color:black;color:white;");
+	var v=document.createTextNode("Here is your info");
+	u.appendChild(v);
+	document.getElementById("second").appendChild(u);
+	var s=document.createElement("input");
+			s.setAttribute("style","position:absolute;bottom:0px;left:15px;width:70%;height:20px");
+			s.setAttribute("type","text");
+			s.setAttribute("id","name1");
+			var i=document.createElement("img");
+    i.setAttribute("src","mice.png");
+    i.setAttribute("id","i2");
+    i.setAttribute("onclick","startDictation1()");
+    i.setAttribute("style","position:absolute;bottom:30px;right:15px;width:50px;height:50px");
+	/*var r=document.createTextNode("Here is your info");
+	s.appendChild(r);*/
+
+    document.getElementById("my_form").appendChild(i);
+	document.getElementById("my_form").appendChild(s);
+		var r=document.createElement("a");
+			r.setAttribute("style","position:absolute;bottom:30px;right:0px;background-color:black;color:white;");
+            r.setAttribute("href","www.google.com");
+            r.setAttribute("id","v6");
+     var q=document.createElement("img");
+     q.setAttribute("src","edinfo.jpg");
+     q.setAttribute("style","width:150px;height:70px;");       
+	r.appendChild(q);
+	document.getElementById("third").appendChild(r);
+window.setTimeout(function() { document.getElementById("name1").focus(); },1000);
+window.setTimeout(function() { document.getElementById("name0").style.bottom="280px"; },2000);
+window.setTimeout(function() { document.getElementById("i1").style.bottom="280px"; },2000);
+window.setTimeout(function() { document.getElementById("v2").style.bottom="210px"; },2000);
+window.setTimeout(function() { document.getElementById("v3").style.bottom="210px"; },2000);
+window.setTimeout(function() { document.getElementById("v4").style.bottom="210px"; },2000);
+window.setTimeout(function() { document.getElementById("v5").style.bottom="210px"; },2000);
+window.setTimeout(function() { document.getElementById("v6").style.bottom="140px"; },2000);
+window.setTimeout(function() { document.getElementById("name1").style.bottom="90px"; },2000);
+window.setTimeout(function() { document.getElementById("i2").style.bottom="90px"; },2000);
+window.setTimeout(function() { document.getElementById("v7").style.display="block"; },2000);
+
+window.setTimeout(function() { document.getElementById("v7").style.bottom="0px"; },2000);
+window.setTimeout(function() { document.getElementById("v8").style.display="block"; },2000);
+
+window.setTimeout(function() { document.getElementById("v8").style.bottom="0px"; },2000);
+window.setTimeout(function() { document.getElementById("v9").style.display="block"; },2000);
+
+window.setTimeout(function() { document.getElementById("v9").style.bottom="0px"; },2000);
+window.setTimeout(function() { document.getElementById("v10").style.display="block"; },2000);
+
+window.setTimeout(function() { document.getElementById("v10").style.bottom="0px"; },2000);
+//window.setTimeout(function(){ document.getElementById()});
+/*var t=document.createElement("div");
+t.setAttribute("id","firstb");
+t.setAttribute("style","position:absolute;bottom:50px;display:block;z-index:5;");*/
+/*var u=document.createElement("p");
+u.setAttribute("style","position:absolute;bottom:100px;left:-100px;bottom:100px;background-color:black;color:white;z-index:99;display:block;");
+var w=document.createTextNode("ICSE");
+u.appendChild(w);
+var u1=document.createElement("p");
+u1.setAttribute("style","position:absolute;bottom:100px;left:-130px;background-color:black;color:white;z-index:99;display:block;");
+var w1=document.createTextNode("CBSE");
+u2.setAttribute("style","position:absolute;bottom:100px;left:-160px;background-color:black;color:white;z-index:99;display:block;");
+u1.appendChild(w1);
+var u2=document.createElement("p");
+u2.setAttribute("style","position:absolute;bottom:100px;left:-190px;background-color:black;color:white;z-index:99;display:block;");
+var w2=document.createTextNode("Other Boards");
+u2.appendChild(w2);
+var u3=document.createElement("p");
+u3.setAttribute("style","position:absolute;bottom:100px;left:120px;background-color:black;color:white;z-index:99;display:block;");
+var w3=document.createTextNode("Higher Studies");
+u3.appendChild(w3);*/
+/*t.appendChild(u);
+t.appendChild(u1);
+t.appendChild(u2);
+t.appendChild(u3);*/
+/*document.getElementById("fourth").appendChild(u);
+document.getElementById("fourth").appendChild(u1);
+document.getElementById("fourth").appendChild(u2);
+document.getElementById("fourth").appendChild(u3);
+document.getElementById("v").appendChild(t);*/
+speak();
+}
+function a1()
+{
+	var x=document.getElementById("name"+0).value;
+	//document.write(x);
+	var s=x.split(" ");
+    var l1=s.length;
+    for(var i=0;i<l1;i++)
+    {
+    	if(s[i]=="educational"||s[i]=="info")
+    	{
+    		alert("hello");
+    	 window.setTimeout(function() { document.getElementById("name0").blur(); },0);
+window.setTimeout(function() { document.getElementById("name0").style.bottom="210px"; },0);
+window.setTimeout(function() { document.getElementById("i1").style.bottom="210px"; },0);
+window.setTimeout(function() { document.getElementById("v2").style.bottom="140px"; },0);
+window.setTimeout(function() { document.getElementById("v3").style.bottom="140px"; },0);
+window.setTimeout(function() { document.getElementById("v4").style.bottom="140px"; },0);
+window.setTimeout(function() { document.getElementById("v5").style.bottom="140px"; },0);
+	var u=document.createElement("p");
+	u.setAttribute("id","p1");
+			u.setAttribute("style","position:absolute;bottom:100px;right:0px;background-color:black;color:white;");
+	var v=document.createTextNode("Here is your info");
+	u.appendChild(v);
+	document.getElementById("second").appendChild(u);
+	var s=document.createElement("input");
+			s.setAttribute("style","position:absolute;bottom:0px;left:15px;width:70%;height:20px");
+			s.setAttribute("type","text");
+			s.setAttribute("id","name1");
+    var i=document.createElement("img");
+    i.setAttribute("src","mice.png");
+    i.setAttribute("id","i2");
+    i.setAttribute("onclick","startDictation1()");
+    i.setAttribute("style","position:absolute;bottom:30px;right:15px;width:50px;height:50px");
+    document.getElementById("my_form").appendChild(i);
+	/*var r=document.createTextNode("Here is your info");
+	s.appendChild(r);*/
+
+
+	document.getElementById("my_form").appendChild(s);
+		var r=document.createElement("a");
+			r.setAttribute("style","position:absolute;bottom:30px;right:0px;background-color:black;color:white;");
+            r.setAttribute("href","www.google.com");
+            r.setAttribute("id","v6");
+     var q=document.createElement("img");
+     q.setAttribute("src","edinfo.jpg");
+     q.setAttribute("style","width:150px;height:70px;");       
+	r.appendChild(q);
+	document.getElementById("third").appendChild(r);
+window.setTimeout(function() { document.getElementById("name1").focus(); },1000);
+window.setTimeout(function() { document.getElementById("name0").style.bottom="280px"; },2000);
+window.setTimeout(function() { document.getElementById("i1").style.bottom="280px"; },2000);
+window.setTimeout(function() { document.getElementById("v2").style.bottom="210px"; },2000);
+window.setTimeout(function() { document.getElementById("v3").style.bottom="210px"; },2000);
+window.setTimeout(function() { document.getElementById("v4").style.bottom="210px"; },2000);
+window.setTimeout(function() { document.getElementById("v5").style.bottom="210px"; },2000);
+window.setTimeout(function() { document.getElementById("v6").style.bottom="140px"; },2000);
+window.setTimeout(function() { document.getElementById("name1").style.bottom="90px"; },2000);
+window.setTimeout(function() { document.getElementById("i2").style.bottom="90px"; },2000);
+window.setTimeout(function() { document.getElementById("v7").style.display="block"; },2000);
+
+window.setTimeout(function() { document.getElementById("v7").style.bottom="0px"; },2000);
+window.setTimeout(function() { document.getElementById("v8").style.display="block"; },2000);
+
+window.setTimeout(function() { document.getElementById("v8").style.bottom="0px"; },2000);
+window.setTimeout(function() { document.getElementById("v9").style.display="block"; },2000);
+
+window.setTimeout(function() { document.getElementById("v9").style.bottom="0px"; },2000);
+window.setTimeout(function() { document.getElementById("v10").style.display="block"; },2000);
+
+window.setTimeout(function() { document.getElementById("v10").style.bottom="0px"; },2000);	
+    	}
+    }
+    speak();
+}
+function a2()
+{
+	var x=document.getElementById("name"+1).value;
+	//document.write(x);
+	var s=x.split(" ");
+    var l1=s.length;
+    for(var i=0;i<l1;i++)
+    {
+    	if(s[i]=="icse"||s[i]=="ICSE")
+    	{
+    		alert("hello");
+    	 window.setTimeout(function() { document.getElementById("name0").blur(); },0);
+window.setTimeout(function() { document.getElementById("name0").style.bottom="400px"; },0);
+window.setTimeout(function() { document.getElementById("i1").style.bottom="400px"; },0);
+window.setTimeout(function() { document.getElementById("v2").style.bottom="300px"; },0);
+window.setTimeout(function() { document.getElementById("v3").style.bottom="300px"; },0);
+window.setTimeout(function() { document.getElementById("v4").style.bottom="300px"; },0);
+window.setTimeout(function() { document.getElementById("v5").style.bottom="300px"; },0);
+window.setTimeout(function() { document.getElementById("v7").style.bottom="200px"; },0);
+window.setTimeout(function() { document.getElementById("v8").style.bottom="200px"; },0);
+window.setTimeout(function() { document.getElementById("v9").style.bottom="200px"; },0);
+window.setTimeout(function() { document.getElementById("v10").style.bottom="200px"; },0);
+	var u=document.createElement("p");
+	u.setAttribute("id","p1");
+			u.setAttribute("style","position:absolute;bottom:100px;right:0px;background-color:black;color:white;");
+	var v=document.createTextNode("Here is your info");
+	u.appendChild(v);
+	document.getElementById("second").appendChild(u);
+	var s=document.createElement("input");
+			s.setAttribute("style","position:absolute;bottom:0px;left:15px;width:70%;height:20px");
+			s.setAttribute("type","text");
+			s.setAttribute("id","name2");
+    var i=document.createElement("img");
+    i.setAttribute("src","mice.png");
+    i.setAttribute("id","i3");
+    i.setAttribute("onclick","startDictation2()");
+    i.setAttribute("style","position:absolute;bottom:0px;right:15px;width:50px;height:50px");
+
+	/*var r=document.createTextNode("Here is your info");
+	s.appendChild(r);*/
+
+
+	document.getElementById("my_form").appendChild(s);
+		var r=document.createElement("a");
+			r.setAttribute("style","position:absolute;bottom:30px;right:0px;background-color:black;color:white;");
+            r.setAttribute("href","www.google.com");
+            r.setAttribute("id","v11");
+     var q=document.createElement("img");
+     q.setAttribute("src","edinfo.jpg");
+     q.setAttribute("style","width:150px;height:70px;");       
+	r.appendChild(q);
+	document.getElementById("third").appendChild(r);
+window.setTimeout(function() { document.getElementById("name1").focus(); },1000);
+window.setTimeout(function() { document.getElementById("name0").style.bottom="350px"; },2000);
+window.setTimeout(function() { document.getElementById("v2").style.bottom="280px"; },2000);
+window.setTimeout(function() { document.getElementById("v3").style.bottom="280px"; },2000);
+window.setTimeout(function() { document.getElementById("v4").style.bottom="280px"; },2000);
+window.setTimeout(function() { document.getElementById("v5").style.bottom="280px"; },2000);
+window.setTimeout(function() { document.getElementById("v6").style.bottom="210px"; },2000);
+window.setTimeout(function() { document.getElementById("name1").style.bottom="210px"; },2000);
+window.setTimeout(function() { document.getElementById("i2").style.bottom="210px"; },2000);
+window.setTimeout(function() { document.getElementById("v7").style.display="block"; },2000);
+
+window.setTimeout(function() { document.getElementById("v7").style.bottom="0px"; },2000);
+window.setTimeout(function() { document.getElementById("v8").style.display="block"; },2000);
+
+window.setTimeout(function() { document.getElementById("v8").style.bottom="0px"; },2000);
+window.setTimeout(function() { document.getElementById("v9").style.display="block"; },2000);
+
+window.setTimeout(function() { document.getElementById("v9").style.bottom="0px"; },2000);
+window.setTimeout(function() { document.getElementById("v10").style.display="block"; },2000);
+
+window.setTimeout(function() { document.getElementById("v10").style.bottom="0px"; },2000);	
+    	}
+    }
+    speak1();
+}
+ function startDictation() {
+
+    if (window.hasOwnProperty('webkitSpeechRecognition')) {
+
+      var recognition = new webkitSpeechRecognition();
+
+      recognition.continuous = false;
+      recognition.interimResults = false;
+
+      recognition.lang = "en-US";
+      recognition.start();
+
+      recognition.onresult = function(e) {
+      	//infinite loop
+        document.getElementById('name'+0).value
+                                 = e.results[0][0].transcript;
+        recognition.stop();
+        document.getElementById('my_form').submit();
+        //condition using a counter
+        a1();
+      };
+
+      recognition.onerror = function(e) {
+        recognition.stop();
+      }
+
+    }
+  }
+   function startDictation1() {
+
+    if (window.hasOwnProperty('webkitSpeechRecognition')) {
+
+      var recognition = new webkitSpeechRecognition();
+
+      recognition.continuous = false;
+      recognition.interimResults = false;
+
+      recognition.lang = "en-US";
+      recognition.start();
+
+      recognition.onresult = function(e) {
+      	//infinite loop
+        document.getElementById('name'+1).value
+                                 = e.results[0][0].transcript;
+        recognition.stop();
+        document.getElementById('my_form').submit();
+        //condition using a counter
+        a2();
+      };
+
+      recognition.onerror = function(e) {
+        recognition.stop();
+      }
+
+    }
+  }
+      var y=document.getElementById("name0").value;
+  function speak()
+  
+   {
+    var y=document.getElementById("name0").value;
+
+    var u = new SpeechSynthesisUtterance();
+var x=document.getElementById("name0");
+    x.value="Here is all the educational info";
+   u.text = x.value;
+    u.lang = 'en-US';
+ document.getElementById("name0").value=y;
+  /*  u.onend = function () {
+        if (callback) {
+            callback();
+        }
+    };
+ 
+    u.onerror = function (e) {
+        if (callback) {
+            callback(e);
+        }
+    };*/
+ 
+   speechSynthesis.speak(u);
+}
+function speak1()
+  
+   {
+    var y=document.getElementById("name1").value;
+
+    var u = new SpeechSynthesisUtterance();
+    if(y=="ICSE")
+    {
+var x=document.getElementById("name1");
+    x.value="Here is all the information about icse board";
+   u.text = x.value;
+    u.lang = 'en-US';
+ document.getElementById("name1").value=y;
+}
+  /*  u.onend = function () {
+        if (callback) {
+            callback();
+        }
+    };
+ 
+    u.onerror = function (e) {
+        if (callback) {
+            callback(e);
+        }
+    };*/
+ 
+   speechSynthesis.speak1(u);
+}
+$(document).ready(function() {
+	$('#my_form').keydown(function(e) {
+		var name=$("#name").val();
+		var email=$("#email").val();
+		var message=$("#message").val();
+		var key = e.which;
+		 if (key == 13) {		
+			if (name ==""){
+				alert("Name is Missing");
+				}
+			else if (email ==""){
+				alert("Email Id is missing");
+				}
+			else if (message ==""){
+				alert("Message is missing");
+				}
+			else{	
+				//alert("Form Submitting ...!!");
+				$('#my_form').submit();
+				a1();
+
+				}
+			return false;
+		}
+
+	 });
+	  $("#v1").click(function(){
+	 	$("#v").slideToggle(500);
+	 });
+	 		
+});
+</script>
+</body>
+</html>
