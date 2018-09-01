@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html>
+<style>
+
+.dropbtn {
+   /* padding: 16px;*/
+    font-size: 16px;
+    border: none;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+   /* background-color: #f1f1f1;*/
+    min-width: 60px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+border:5px;
+border-color:white;
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: white;
+    padding: 10px 15px;
+    text-decoration: none;
+    display: block;
+}
+.dropdown-content a:hover {background-color: #000}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    opacity:.6;
+}
+* {
+  box-sizing: border-box;
+}
+
+.row , .column {
+  padding: 0 8px;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.column {
+  float: left;
+  width: 25%;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: black;
+}
+
+/* Modal Content */
+.modal-content {
+  position: relative;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 0;
+  width: 90%;
+  max-width: 1200px;
+}
+
+/* The Close Button */
+.close {
+  color: white;
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #999;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.mySlides {
+  display: none;
+}
+
+.cursor {
+  cursor: pointer
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+img {
+  margin-bottom: -4px;
+}
+
+.caption-container {
+  text-align: center;
+  background-color: black;
+  padding: 2px 16px;
+  color: white;
+}
+
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+
+img.hover-shadow {
+  transition: 0.3s
+}
+
+.hover-shadow:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
+}
+    body{width:100%;
+  background-color: black;
+       background-size:cover;}
+</style>
+<body >
+<div style="background-color:gray;z-index:-1;">
+<div style="background-image:url(22.jpg);background-repeat:no-repeat;background-size:100% 79%;">
+<header >
+<h1 style="color:white;background-color:white;font-size: 120px;position:relative;"><img src="careerlogo1.png" alt="" style="width:280px;height:100px;">      <a href="#" style="color:black;font-family:AR DESTINE;font-size:32px;" >HOME</a>
+<div class="dropdown">
+  <a class="dropbtn" href="#" style="color:black;font-family:AR DESTINE;font-size:32px;" >Courses Offered</a>
+  <div class="dropdown-content" style="width:200px;height:380px;z-index:2;background-color:gray;">
+    <a href="engineering.html"style="width:180px;height:90px;z-index:2;font-size:23px;font-family:AR DESTINE;">Engineering</a>
+    <a href="fullpagetabs.html"style="width:180px;height:90px;z-index:2;font-size:23px;font-family:AR DESTINE;">Medical</a>
+    <a href="upsc.html"style="width:180px;height:90px;z-index:2;font-size:23px;font-family:AR DESTINE;">UPSC</a>
+    <a href="bank.html"style="width:180px;height:90px;z-index:2;font-size:23px;font-family:AR DESTINE;">SSC</a>
+  </div>
+</div>&nbsp;&nbsp;&nbsp;<a href="login.php"><button style="width:auto;padding: 20px 70px;font-size:26px;background-color:black;border-radius:50%;color:white;" >Login</button></a><a href="register.php"><button style="width:auto;padding: 20px 70px;font-size:26px;background-color:black;border-radius:50%;color:white;" >Register</button></a></h1>
+</header>
+<br/>
+<br>
+    <br>
+    <br>
+    <h1 align=center style="font-family:AR DESTINE;text-align:center;">NEWS</h1>
+    <br>
+    <br>
+<h2 style="text-align:center;font-family:AR DESTINE;color:white;font-size:30px;color:black;">WHY OUR COURSES ARE BETTER AND WHY THEY ARE CHOSEN BY US?</h2>
+<p style="font-family:AR Berkley;font-sixe:18px;color:black;"> </p><p style="font-family:AR Berkley;font-size:26px;color:black;">These courses provide better enhancement and encouragement to the world and moreover they are some of the most valuable courses present in  India.Each of these courses increases our knowledge efficiency and thats why according to me these courses are so much valuable and thats why we have included these pages.</p>
+<div class="row">
+  <div class="column">
+    <img src="a.jpg" style="width:100%" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
+  </div>
+  <div class="column">
+    <img src="b.jpg" style="width:100%" onclick="openModal();currentSlide(2)" class="hover-shadow cursor">
+  </div>
+  <div class="column">
+    <img src="c.jpg" style="width:100%" onclick="openModal();currentSlide(3)" class="hover-shadow cursor">
+  </div>
+  <div class="column">
+    <img src="d.jpg" style="width:100%" onclick="openModal();currentSlide(4)" class="hover-shadow cursor">
+  </div>
+</div>
+
+<div id="myModal" class="modal">
+  <span class="close cursor" onclick="closeModal()">&times;</span>
+  <div class="modal-content">
+
+    <div class="mySlides">
+      <div class="numbertext">1 / 4</div>
+      <img src="a.jpg" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">2 / 4</div>
+      <img src="b.jpg" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">3 / 4</div>
+      <img src="c.jpg" style="width:100%">
+    </div>
+    
+    <div class="mySlides">
+      <div class="numbertext">4 / 4</div>
+      <img src="d.jpg" style="width:100%">
+    </div>
+    
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+    <div class="caption-container">
+      <p id="caption"></p>
+    </div>
+
+
+    <div class="column">
+      <img class="demo cursor" src="a.jpg" style="width:100%" onclick="currentSlide(1)" alt="">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="b.jpg" style="width:100%" onclick="currentSlide(2)" alt="">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="c.jpg" style="width:100%" onclick="currentSlide(3)" alt="">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="d.jpg" style="width:100%" onclick="currentSlide(4)" alt="">
+    </div>
+  </div>
+</div>
+</div>
+</div>
+<hr>
+<br>
+
+<hr>
+<br>
+<!--<div style="background-color:gray;z-index:-1;">-->
+<div style="background-image:url(22.jpg);background-repeat:no-repeat;background-size:100% 99%;">
+<h2 style="text-align:center;font-family:AR DESTINE;font-size:30px;color:black;">A BRIEF DESCRIPTION OF OUR UPCOMING COURSES</h2>
+<br><br><br><br><br><br><br><br><br>
+<p style="font-family:AR Berkley;font-size:18px;color:white;"> </p><p style="font-family:AR Berkley;font-size:28px;color:black;">The upcoming courses which we are going to provide in the upcoming weeks ,these all courses are relateed to computer courses.We have included one of the best c2omputer courses which are front-end programming  back end programming Android related Courses which are going to bring a great revolution in computer industry</p><br><br><br><br><br><br><br><br>
+</div>
+<div style="background-color:gray;z-index:-1;">
+<div class="row">
+  <div class="column">
+    <img src="q.jpg" style="width:100%" onclick="openModal4();currentSlide4(1)" class="hover-shadow cursor">
+  </div>
+  <div class="column">
+    <img src="r.jpg" style="width:100%" onclick="openModal4();currentSlide4(2)" class="hover-shadow cursor">
+  </div>
+  <div class="column">
+    <img src="s.jpg" style="width:100%" onclick="openModal4();currentSlide4(3)" class="hover-shadow cursor">
+  </div>
+  <div class="column">
+    <img src="t.jpg" style="width:100%" onclick="openModal4();currentSlide4(4)" class="hover-shadow cursor">
+  </div>
+</div>
+</div>
+<div id="myModal4" class="modal">
+  <span class="close cursor" onclick="closeModal4()">&times;</span>
+  <div class="modal-content">
+
+    <div class="mySlides4">
+      <div class="numbertext">1 / 4</div>
+      <img src="q.jpg" style="width:100%">
+    </div>
+
+    <div class="mySlides4">
+      <div class="numbertext">2 / 4</div>
+      <img src="r.jpg" style="width:100%">
+    </div>
+
+    <div class="mySlides4">
+      <div class="numbertext">3 / 4</div>
+      <img src="s.jpg" style="width:100%">
+    </div>
+    
+    <div class="mySlides4">
+      <div class="numbertext">4 / 4</div>
+      <img src="t.jpg" style="width:100%">
+    </div>
+    
+    <a class="prev" onclick="plusSlides4(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides4(1)">&#10095;</a>
+
+    <div class="caption-container">
+      <p id="caption4"></p>
+    </div>
+
+
+    <div class="column">
+      <img class="demo4 cursor" src="q.jpg" style="width:100%" onclick="currentSlide4(1)" alt="">
+    </div>
+    <div class="column">
+      <img class="demo4 cursor" src="r.jpg" style="width:100%" onclick="currentSlide4(2)" alt="">
+    </div>
+    <div class="column">
+      <img class="demo4 cursor" src="s.jpg" style="width:100%" onclick="currentSlide4(3)" alt="">
+    </div>
+    <div class="column">
+      <img class="demo4 cursor" src="t.jpg" style="width:100%" onclick="currentSlide4(4)" alt="">
+    </div>
+  </div>
+</div>
+<footer style="background-color:black;color:white;position:relative;top:50px;height:150px;width:100%;">
+<img  src="careerlogo1.png" alt="career desk" style="position:absolute;left:30px;top:10px;width:70px;height:35px;" >
+<table style="left:120px;top:45px;position:absolute;">
+  <tr>
+    <th>Courses Offered</th>
+    <th>Upcoming Courses</th> 
+    <th>Others</th>
+  </tr>
+  <tr>
+    <td>Engineering</td>
+    <td>Front End Programming</td>
+    <td>About</td>
+  </tr>
+  <tr>
+    <td>Medical Science</td>
+    <td>Back-End Programming</td>
+    <td>Services</td>
+  </tr>
+  <tr>
+    <td>UPSC</td>
+    <td>C,C++,Java,Python</td>
+    <td>Clients</td>
+  </tr>
+  <tr>
+  <td>SSC</td>
+  </tr>
+</table>
+
+<div style="position:absolute;top:130px;left:770px;">&copy; 2010<script>new Date().getFullYear()>2010&&document.write("-"+new Date().getFullYear());</script>, Company.</div>
+</footer>
+<script>
+function openModal() {
+  document.getElementById('myModal').style.display = "block";
+}
+
+function closeModal() {
+  document.getElementById('myModal').style.display = "none";
+}
+
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  var captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+    
+function openModal4() {
+  document.getElementById('myModal4').style.display = "block";
+}
+
+function closeModal4() {
+  document.getElementById('myModal4').style.display = "none";
+}
+
+var slideIndex4 = 1;
+showSlides4(slideIndex4);
+
+function plusSlides4(n4) {
+  showSlides4(slideIndex4 += n4);
+}
+
+function currentSlide4(n4) {
+  showSlides4(slideIndex4 = n4);
+}
+
+function showSlides4(n4) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides4");
+  var dots = document.getElementsByClassName("demo4");
+  var captionText = document.getElementById("caption4");
+  if (n4 > slides.length) {slideIndex4 = 1}
+  if (n4 < 1) {slideIndex4 = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[(slideIndex4)-1].style.display = "block";
+  dots[(slideIndex4)-1].className += " active";
+  captionText.innerHTML = dots[(slideIndex4)-1].alt;
+}
+</script>
+    
+</body>
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+p
+{
+color:black;
+bold,italic;
+}
+
+* {
+    box-sizing: border-box;
+}
+.header, .footer {
+    background-color: grey;
+    color: white;
+    padding: 15px;
+}
+.column {
+    float: left;
+    padding: 15px;
+}
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+.menu {
+    width: 25%;
+}
+.content {
+    width: 75%;
+}
+.menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+.menu li {
+    padding: 8px;
+    margin-bottom: 8px;
+    background-color: #33b5e5;
+    color: #ffffff;
+}
+.menu li:hover {
+    background-color: #0099cc;
+}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>Client Page</h1>
+</div>
+
+<div class="clearfix">
+  <div class="column menu">
+    <ul>
+      <li>ENGINNERING</li>
+      <li>MEDICAL</li>
+      <li>UPSC</li>
+      <li>SSC</li>
+    </ul>
+  </div>
+
+
+  <div class="column content">
+    <h1>Information provided for the clients</h1>
+<p>After 12 class every student has some plans to do in their  future ,some of the student want go in engineering ,some wants go in medical and as like this everyone has their own ideas for their future</p> 
+ <p>In this website we are providing information about the courses we can think about after 12th class.Student can learn so many things from this website about their career plans</p></div>
+</div>
+<footer style="background-color:black;color:white;position:relative;top:0px;background-color:gray;height:170px;width:100%;">
+<img  src="careerlogo1.png" alt="career desk" style="position:absolute;left:30px;top:10px;width:70px;height:35px;" >
+<table style="left:120px;top:45px;position:absolute;">
+  <tr>
+    <th>Courses Offered</th>
+    <th>Upcoming Courses</th> 
+    <th>Others</th>
+  </tr>
+  <tr>
+    <td>Engineering</td>
+    <td>Front End Programming</td>
+    <td>About</td>
+  </tr>
+  <tr>
+    <td>Medical Science</td>
+    <td>Back-End Programming</td>
+    <td>Services</td>
+  </tr>
+  <tr>
+    <td>UPSC</td>
+    <td>C,C++,Java,Python</td>
+    <td>Clients</td>
+  </tr>
+  <tr>
+  <td>SSC</td>
+  </tr>
+</table>
+
+</footer>
+
+</body>
+</html>

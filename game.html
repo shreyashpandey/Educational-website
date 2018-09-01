@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="author" content="Shreyash Pandey">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script>
+function a()
+{
+var res=confirm("Will you like ro play this game");
+if(res==true)
+{
+	var s=parseInt("0");
+var s1=parseInt("0");
+alert("Lets start this game");
+
+while(s!=20||s1!=20)
+{
+var a=prompt("for 1st player enter 1 or 2");
+var x=parseInt(a);
+if(x!=1&&x!=2)
+{
+alert("You have entered the wrong value you have to start it again");
+
+continue;
+}
+alert(x);
+s=s+x;
+s1=s;
+alert(s);
+if(s>=20)
+break;
+var b=prompt("for 2nd player enter 1 or 2");
+var y=parseInt(b);
+if(y!=1&&y!=2)
+{
+alert("You have enterd the wrong value. You have to start it again");
+continue;
+}
+s1=y+s;
+s=s1;
+alert(s1);
+if(s1>=20)
+{
+break;
+}
+}
+if(s==20)
+{
+alert("a is winner");
+alert("Thanx for playing this again");
+} 
+else if(s1==20)
+{
+alert("b is winner");
+alert("Thanx for playing this again");
+}
+}
+else
+alert("Thank you for opening this");
+}
+ function imageRollover(imgobj,path)
+        {
+            imgobj.src=path;
+            document.getElementById("a")[0].src=path;
+            imgobj.src=path;
+        }
+</script>
+</head>
+<body style="display:block;">
+<div style="display:block;">
+<h1 style="color:black;">Hello This Is My Game</h1></div>
+
+<style>
+.dropbtn {
+   /* padding: 16px;*/
+    font-size: 16px;
+    border: none;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+   /* background-color: #f1f1f1;*/
+    min-width: 60px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+border:5px;
+border-color:white;
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: white;
+    padding: 10px 15px;
+    text-decoration: none;
+    display: block;
+}
+.dropdown-content a:hover {background-color: #000}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    opacity:.6;
+}
+.background-wrap {
+				position: fixed;
+				z-index: -1000;
+				width: 100%;
+				height: 100%;
+				overflow: hidden;
+				top: 0;
+				left: 0;
+			}
+			
+			#video-bg {
+				position: absolute;
+				top: 0;
+				left: 0;
+				min-height: 100%;
+				min-width: 100%;
+				background-color:#808080;
+				
+			}
+			#a:hover{
+				transform:scale(1.5);
+			}
+</style>
+</head>
+<body>
+	<div class="background-wrap" style="z-index:-1;">
+			<video id="video-bg" preload="auto" autoplay="true" loop="loop" muted="muted"> 
+				<source src="tomclancy.mp4" type="video/mp4">
+			
+				Sorry That The Amazing video Is Not Supported Please Contact us and tell us which operating system or which browser you use Sorry!
+			</video>   
+</div>
+
+<header >
+<h1 style="color:white;background-color:white;font-size: 120px;position:relative;"><img src="careerlogo1.png" alt="" style="width:280px;height:100px;">      <a href="#" style="color:black;font-family:AR DESTINE;font-size:32px;" >HOME</a>
+<div class="dropdown">
+  <a class="dropbtn" href="#" style="color:black;font-family:AR DESTINE;font-size:32px;" >Courses Offered</a>
+  <div class="dropdown-content" style="width:200px;height:380px;z-index:2;background-color:gray;">
+    <a href="engineering.html"style="width:180px;height:90px;z-index:2;font-size:23px;font-family:AR DESTINE;">Engineering</a>
+    <a href="fullpagetabs.html"style="width:180px;height:90px;z-index:2;font-size:23px;font-family:AR DESTINE;">Medical</a>
+    <a href="upsc.html"style="width:180px;height:90px;z-index:2;font-size:23px;font-family:AR DESTINE;">UPSC</a>
+    <a href="bank.html"style="width:180px;height:90px;z-index:2;font-size:23px;font-family:AR DESTINE;">SSC</a>
+  </div>
+</div>&nbsp;&nbsp;&nbsp;<a href="login.php"><button style="width:auto;padding: 20px 70px;font-size:26px;background-color:black;border-radius:50%;color:white;" >Login</button></a><a href="register.php"><button style="color:white;width:auto;padding: 20px 70px;font-size:26px;background-color:black;border-radius:50%;" >Register</button></a></h1>
+</header>
+<section>
+<div style="background-color:white;border-width:5px;border-color:black;box-shadow:5px 5px gray;width:600px;height:500px;position:absolute;left:480px;
+top:380px;">
+<span style="opacity:0.6;"><h2 style="color:black;opacity:0.6;font-family:AR DESTINE;text-align:center;font-size:26px;">MIND GAME</h2></span>
+<img id="a" src="23.jpg" style="width:600px;height:400px;" onclick="a()"alt="mind game photos" onmouseover="javascript:imageRollover(this,'24.jpg');"/>
+</div>
+</body>
+</html>
